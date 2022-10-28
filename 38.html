@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/j.js" type="text/javascript"></script><script src="js/s.js" type="text/javascript"></script>
+  		<script type="text/javascript" src="jquery.min.js"></script>
+
+  
+
+
+
+<style>
+* {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    list-style: none;
+    quotes: none;
+    text-decoration: unset;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+	
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #fffdf1;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #fffdf1;
+    overflow-x: hidden;
+    margin: 0px 0px;
+}
+
+#t {
+    text-align: justify;
+    line-height: 2;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #fffdf1;
+    border-radius: 0px;
+	font-size: 17px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 11px;
+    padding-top: 14px;
+    font-size: 17px;
+	color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+	border-bottom: double #f58181;
+    border-top: double #f58181;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #f2f2f2;
+    border-radius: 0px;
+    line-height: 1.2;
+    font-family: "georgia"
+	text-align: center;
+
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 17px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #0A3158;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+
+
+
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+		
+    }
+	
+	
+	phr {
+		color:#918e8f;
+		font-size:17px;
+		font-style: italic;
+	}
+
+	pnt {
+		color:black;
+		font-size:14px;
+		font-style: italic;
+	}
+
+nav {
+    padding: 10px 20px;
+}
+
+nav .brand a{
+    color: black;
+}
+
+main {
+    padding: 10px 10px 70px;
+    position: relative;
+}
+
+main p {
+    padding: 0px 0;
+}
+.bottom-nav {
+    padding: 5px;
+    background-color: #f2f2f2;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+	padding-left: -5px;
+	border: 0.5px solid #f58181;
+}
+
+.bottom-link-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav a {
+    color: #f58181;
+    cursor: pointer;
+}
+
+.bottom-nav a svg {
+    width: 25px;
+}
+
+.bottom-nav a:nth-child(3) {
+    transform: scale(1.5) translateY(-10px);
+    background-color: #f2f2f2;
+    border-radius: 1000px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #f58181;
+    color: #f58181;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bottom-nav {
+        width: 100%;
+        bottom: 0%;
+        left: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        -webkit-transform: translate(-50%,0%);
+           -moz-transform: translate(-50%,0%);
+            -ms-transform: translate(-50%,0%);
+             -o-transform: translate(-50%,0%);
+                transform: translate(-50%,0%);
+    }
+
+    .bottom-link-nav {
+        position: relative;
+        width: 450px;
+    }
+
+}
+
+
+
+</style>
+<style> 
+	 @font-face{;
+        font-family:"LPMQ_IsepMisbah";
+        src:url("LPMQ_IsepMisbah.ttf")
+    }
+
+	
+	 @font-face{;
+        font-family:"KFGQPC Uthman Taha Naskh Bold";
+        src:url("fonts.ttf")
+    }
+</style>
+	
+    <script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('body').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('body').css("font-size", size);
+            });
+        });
+    </script>
+<script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('#content').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('#content').css("font-size", size);
+            });
+        });
+</script>
+</head>	
+<body>
+<div id="mnj" style="display: block; position: right;">
+<ul id="tejaul">
+<li><a href="1.html"><font size="3" face="LPMQ_IsepMisbah">السَّلَامُ عَلَيْكَ</font></a></li>
+<li><a href="2.html"><font size="3" face="LPMQ_IsepMisbah">اَلصَّلَوةُ عَلَى النَّبِّي </font></a></li>
+<li><a href="3.html"><font size="3" face="LPMQ_IsepMisbah">اِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِيْنًا</font></a></li>
+<li><a href="4.html"><font size="3" face="LPMQ_IsepMisbah">اَلْحَمْدُ لِلَّهِ الَّذِي شَرَّفَ الْأَنَامَ</font></a></li>
+<li><a href="5.html"><font size="3" face="LPMQ_IsepMisbah">عَلَى النَّبِيِّ خَاتَمِ الرَّسُلِ الْكِرَامِ</font></a></li>
+<li><a href="6.html"><font size="3" face="LPMQ_IsepMisbah">قَوْلُهُ تَعَالَى يَآ أَيُّهَا النَّبِيُّ</font></a></li>
+<li><a href="7.html"><font size="3" face="LPMQ_IsepMisbah">تَنَقَّلْتَ فِي أَصْلَابِ أَرْبَابِ سُودَدٍ</font></a></li>
+<li><a href="8.html"><font size="3" face="LPMQ_IsepMisbah">عَنْ يَزِيدَ بْنِ عَبْدِ اللّٰهِ</font></a></li>
+<li><a href="9.html"><font size="3" face="LPMQ_IsepMisbah">وُلِدَ الْحَبِيبُ وَخَـدُّهُ مُتَوَرِّدُ</font></a></li>
+<li><a href="10.html"><font size="3" face="LPMQ_IsepMisbah">وَوَضَعَتِ الْحَبِيْبَ</font></a></li>
+<li><a href="11.html"><font size="3" face="LPMQ_IsepMisbah">اَحْمَدَ الْهَادِيَ الَّذِيْ عَمَّ</font></a></li>
+<li><a href="12.html"><font size="3" face="LPMQ_IsepMisbah">هَذَا كَفِنِيْ مِنْ قَدَيْمِ دَهْرِيْ</font></a></li>
+<li><a href="13.html"><font size="3" face="LPMQ_IsepMisbah">وَمَقَتْ اَمِنَةُ مُحَمَّدُا</font></a></li>
+<li><a href="14.html"><font size="3" face="LPMQ_IsepMisbah">فِي مِثْلِ حُسْنِكَ تُعْذَرُ</font></a></li>
+<li><a href="15.html"><font size="3" face="LPMQ_IsepMisbah">صَلَّى عَلَيْكَ اللهُ يَاعَدْنَانِ</font></a></li>
+<li><a href="16.html"><font size="3" face="LPMQ_IsepMisbah">فَسُبْحَانَ مَنْ أَبْرَزَ</font></a></li>
+<li><a href="17.html"><font size="3" face="LPMQ_IsepMisbah">بَدَتْ لَنَا فِي رَبِيعٍ</font></a></li>
+<li><a href="18.html"><font size="3" face="LPMQ_IsepMisbah">فَلَمّاَ آنَ أَوَانُ مَوْلِدِهِ</font></a></li>
+<li><a href="19.html"><font size="3" face="LPMQ_IsepMisbah">مَحَلُّ الْقِيَامِ</font></a></li>
+<li><a href="20.html"><font size="3" face="LPMQ_IsepMisbah">فَلَمَّا أَشْرَقَ نُورُهُ</font></a></li>
+<li><a href="21.html"><font size="3" face="LPMQ_IsepMisbah">وَلَمَّا وُلِدَ سَأَلَ الْوَحْشُ</font></a></li>
+<li><a href="22.html"><font size="3" face="LPMQ_IsepMisbah">صَلَاةُ اللّٰهِ عَلَى الهَادِيْ مُحَمَّدْ</font></a></li>
+<li><a href="23.html"><font size="3" face="LPMQ_IsepMisbah">قَالَ أَهْلُ السِّيَرِ رَضِيَ اللّٰهُ</font></a></li>
+<li><a href="24.html"><font size="3" face="LPMQ_IsepMisbah">فَازَتْ حَلِيْمَةُ مِنْ رَّضَاعِ مَحَمَّدٍ</font></a></li>
+<li><a href="25.html"><font size="3" face="LPMQ_IsepMisbah">قَالَتْ حَلِيْمَةُ فَجِئْتُ</font></a></li>
+<li><a href="26.html"><font size="3" face="LPMQ_IsepMisbah">اَللّٰهُ اَللّٰهُ اَللّٰهُ خَالِقُنَا</font></a></li>
+<li><a href="27.html"><font size="3" face="LPMQ_IsepMisbah">قَالَتْ حَلِيْمَةُ فَاَخَذْتُهُ </font></a></li>
+<li><a href="28.html"><font size="3" face="LPMQ_IsepMisbah">مَنْ مِّثْلُ اَحْمَدَ</font></a></li>
+<li><a href="29.html"><font size="3" face="LPMQ_IsepMisbah">قَالَتْ حَلِيْمَةُ فَمَا زَالَ </font></a></li>
+<li><a href="30.html"><font size="3" face="LPMQ_IsepMisbah">يَامَوْلِدًا قَدْ حَوَى </font></a></li>
+<li><a href="31.html"><font size="3" face="LPMQ_IsepMisbah">وَسَمَّاهُ رَبُّ الْعَالَمِيْنَ حُمَمَّدًا</font></a></li>
+<li><a href="32.html"><font size="3" face="LPMQ_IsepMisbah">صَلَّى الْاِلَهُ عَلَى النُّوْرِ</font></a></li>
+<li><a href="33.html"><font size="3" face="LPMQ_IsepMisbah">قَالَ عَبْدُ الْوَاحِدِ بْنُ اِسْمَعِيْلَ</font></a></li>
+<li><a href="34.html"><font size="3" face="LPMQ_IsepMisbah"> تَعَالَوْبِنَا نَصْطَلِحْ</font></a></li>
+<li><a href="35.html"><font size="3" face="LPMQ_IsepMisbah">فَقَالَتْ إِنَّكَ لَنَبِيٌّ كَرِيمٌ</font></a></li>
+<li><a href="36.html"><font size="3" face="LPMQ_IsepMisbah">صَلَاةٌ وَّتَسْلِيْمٌ وَاَزْكَى تَحِيَّةٍ</font></a></li>
+<li><a href="37.html"><font size="3" face="LPMQ_IsepMisbah">فِي حُبِّ سَيِّدِنَا مُحَمَّد </font></a></li>
+<li><a href="38.html"><font size="3" face="LPMQ_IsepMisbah">دُعَاءُ المَوْلِد</font></a></li>
+
+
+
+</ul>
+
+</div>
+
+
+	
+		</div><div data-role="content"><div id="t">
+	
+
+
+
+<h1><font size="5" face="LPMQ_IsepMisbah">دُعَاءُ المَوْلِد </font><br/>
+<a class="font-button plus"><img style="bottom:10px;position:fixed;right:0px;width:35px;" src=""/><img src="masjid4.png">&nbsp;&nbsp;<br/><br/>
+<a class="font-button minus"><img style="bottom:10px;position:fixed;left:0px;width:35px;" src=""/><img src="masjid3.png"></a>
+
+</h1><br/><br/>
+
+
+
+</div>
+
+<div class="arab3center">
+اللّٰـهُمَّ صَـلِّ وَسَلِّــمْ وَبَارِكْ عَلَيْهِ
+</div>
+
+
+
+
+
+
+
+
+<div class="arab3">
+
+
+صَدَقَ اللهُ الْعَلِيُّ الْعِظِيْمُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَبَلَغَ رَسُوْلُهُ الْحَبِيْبُ الْكَرِيْمُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَنَحْنُ عَلَى ذَلِكَ مِنَ الشَّاهِدِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِينَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+اَللّٰهُـــمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْأَوَّلِينْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+اَللّٰهُـــمَّ وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْآخِرِينْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي النَّبِيِّينْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْمُرْسَلِينَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  
+
+
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي كُلِّ وَقْتٍ وَحِينٍ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْمَلَاِ الْأَعْلَى إِلَى يَوْمِ الدِّينِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَتُ اللهِ وَبَرَكَاتُهُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  اَلسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللهِ الصَّالِحِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+اَللّٰهُـــمَّ بَلِّغْ رُوْحَ سَيِّدِنَا مُحَمَّدٍ مِّنَّا تَحِيَّةً وَّسَلَامًا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَاجْزِهِ عَنَّا اَفْضَلَ مَا جَزَيْتَ نَبِيًّا عَنْ اُمَّتِهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَاَتِهِ الْوَصِيْلَةَ وَالْفَضِيْلَةَ وَالشَّرَفَ وَالدَّرَجَةَ الْعَالِيَةَ الرَّفِيْعَةَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَابْعَثْهُ الْمَقَامَ الْمَحْمُوْدً الَّذِي وَعَدْتَهُ يَا اَرْحَمَ الرَّحِمِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+اَللّٰهُـــمَّ جَعَلَنَا وَإِيَّاهُمْ مِمَّنْ يَسْتَوْجِبُ شَفَاعَتَهُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  وَيَرْتَجِي بِهِ مِنَ اللهِ رَحْمَتَهُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِينَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+اَللَّهُمَّ بِحُرْمَةِ هَذَا النَّبِيِّ الْكَرِيْمِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  وَآلِهِ وَأَصْحَابِهِ السَّالِكِيْنَ لِنَهْجِهِ الْقَوِيْمِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+اِجْعَلْنَا مِنْ خِيَارِ أُمَّتِهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  وَاسْتُرْنَا بِذَيْلِ حُرْمَتِهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَاحْشُرْنَا غَدًا فِي زُمْرَتِهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  وَاسْتَعْمِلْ أَلْسِنَتَنَا فِي مَدْحِهِ وَنُصْـرَتِهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  وَأَحْيِنَا مُسْتَمْسِكِيْنَ بِطَاعَتِهِ وَمَحَبَّتِهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>  وَأَمِتْنَا عَلَى سُنَّتِهِ وَجَمَاعَتِهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+
+اللّٰهُــمَّ  أَدْخِلْنَا مَعَهُ الْجَنَّةَ فَإِنَّهُ أَوَّلُ مَنْ يَدْخُلُهَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+وَأَنْزِلْنَا مَعَهُ فِي قُصُورِهَا فَإِنَّهُ أَوَّلُ مَنْ يَنْزِلُهَا وَارْحَمْنَا بِهِ يَوْمَ يَسْتَشْفِعُ بِهِ الْخَلاَئِقُ فَتَرْحَمُهَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+اللّٰهُــمَّ إِنَّا قَدْ حَضَـرْنَا قِرَاءَةَ مَوْلِدِ نَبِيِّكَ الْكَرِيْمِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> فَأَفِضْ عَلَيْنَا بِبَرَكَتِهِ لِبَاسَ الْعِزَّ وَالتَّكْرِيْمِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وأَسْكِنَّا بَجَوَارِهِ فِي دَارِ النَّعِيْمِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَنَعِّمْنَا فِي الْجَنَّةِ بِالنَّعِيمِ الْمُقِيْمِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+اللّٰهُــمَّ إِنَّا نَسْأَلُكَ بِجَاهِ هَذَا النَّبِيِّ الْمُصطَفَى <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَآلِهِ أَهْلِ الصِّدْقِ وَالْوَفَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> كُنْ لَّنَا مُعِينًا وَمُسْعِفًا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَبَوِّأْنَا مِنَ الْجَنَّةِ غُرَفًا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَارْزُقْنَا بِجَاهِهِ عِنْدَكَ قَبُولًا وَعِزًّا وَشَرَفًا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+اللّٰهُــمَّ إِنَّا نَتَوَسَّلُ إِلَيْكَ بِنَبِـيِّكَ الْمُخْتَارِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَآلِهِ الْأَطْهَارِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَأَصْحَابِهِ الْأَخْيَارِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> كَفِّرْ عَنَّا الذُّنُوبَ وَالْأَوْزَارَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> يَا اَللهُ يَااللهُ يَااللهُ وَاحْرُسْنَا مِنْ جَمِيعِ الْمَخَاوِفِ وَالْأَخْطَارِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَاجْمَعْ بَيْنَنَا وبَيْنَهُ فِي دَارِ الْقَرَارِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+وَتَقَبَّلْ مِنَّا مَا قَدَّمْنَا مِنْ يَسِيْرِ أَعْمَالِنَا فِي الْإِعْلاَنِ وَالْإِسْرَارِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَارْحَمْنَا بِرَحْمَتِكَ وَاغْفِرْ لَنَا بِمَغْفِرَتِكَ إِنَّكَ أَنْتَ العَفُوُّ الْغَفَّارُ يَاغَفَّارُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+</div>
+
+<div class="arab4">
+إِلٰهِى يَا كَرِيْمُ إِغْفِرْ ذُنُوْبَنَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+</div>
+
+
+<div class="arab5">
+ بِجَاهِ اْلمُصْطَفٰى فَرِّجْ عَلَيْنَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+ </div>
+ 
+ 
+<div class="arab4">
+إِلٰهِى تَمِّمِ النَّعْمَا عَلَيْنَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab5">
+ وَوَفِقْنَا لِشُكْرِكَ مَا بَقِيْنَا<font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+ 
+ </div>
+ 
+<div class="arab4">
+أَذِقْنَا بَرْدَ عَفْوِكَ يَا وَالْعَوَافِيْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+</div>
+
+<div class="arab5">
+ وَهَوِّنْ كُلَّ مَطْلُوْبٍ عَلَيْنَا<font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+ </div>
+ 
+ 
+<div class="arab4">
+فَإِنَّا لَا نُعَوِّلُ فِى مُهِمٍّ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab5">
+ أَلَمْ بِنَا وَلَا مَا قَدْ لَقِيْنَا<font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+ 
+ </div>
+ 
+<div class="arab4">
+عَلىٰ أَحـَدٍ وَلَا سَبَبٍ وَلٰكِنْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+</div>
+
+<div class="arab5">
+ إِذَا ضَاقَتْ فَكُنْتَ لَهَا قَمِيْنَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+ 
+ </div>
+ 
+<div class="arab4">
+وَصَلِّ عَلىٰ رَسُوْلِكَ كُلَّ حـِيْنٍ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+</div>
+
+<div class="arab5">
+ مُحَمَّدِنِ النَّبِيِّ الزَّاكِى الْأَمِيْنَا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+ 
+ </div>
+ 
+<div class="arab4">
+كَذَا اٰلٍ وَأَصْحَابِ كِرَامٍ  <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+</div>
+
+<div class="arab5">
+يَا اِلَهِيْ بِحَقِّهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab4">
+ دَمِّرِ الْبَغْيَ وَالْفَسَادَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+ </div>
+ 
+ 
+<div class="arab5">
+يَا اِلَهِيْ بِحَقِّهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+</div>
+
+<div class="arab4">
+جُدْ بِلُطْفِكَ يَا جَوَادُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+</div>
+
+<div class="arab5">
+يَا اِلَهِيْ بِحَقِّهِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab4">
+أَتِنَا السُّؤْلَ وَالْمُرَادَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab5">
+حَصَلَ الْقَصْدُ وَالْمُرَادُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab4">
+وَصَفَا الْوَقْتُ وَالْوِدَادُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab5">
+وَبِرُؤْيَا مُحَمَّدٍ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab4">
+فَرِحَتْ اَنْفُسُ الْعِبَادِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+<div class="arab5">
+عَنْ غَرَامِيْ وَلَوْعَتِيْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+<div class="arab4">
+لَا تُحَرِّكْنِيْ فِيْ الْمَلَامِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+<div class="arab5">
+
+ذَاكَ دِيْنِيْ وَمِلَّتِيْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+
+<div class="arab4">
+ذَاكَ لِيْ غَايَةُ الْمَرَامِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+<div class="arab5">
+مِحْنَتِيْ فِيْهِ لَذَّتِيْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> 
+</div>
+
+<div class="arab4">
+سَلْوَتِيْ لِلْهَوَى حَرَامُ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+<div class="arab5">
+مَا فُتِنْتُمْ كَفِتْنَتِيْ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+<div class="arab4">
+سَدِّدُ نِيْ بِلَا كَلَامِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+</div>
+
+<div class="arab2center">
+
+وَصَلَّى اللّٰهُ عَلَى خَيْرِ خَلْقِكَ سَيْدِنَا مُحَمَّدٍ وَاَلِهِ وَاَصْحَابِهِ اَجْمَعِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَسَلَّمَ تَسْلِيْـمًا كَثِيـْرًا <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَاخْتِمْ لَنـَا مِنْكَ بِخَيْرٍ بِرَحْمَتِكَ يَا اَرْحَمَ الرَّاحِمِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+صَلَّى اللّٰهُ رَبُّنَا عَلىٰ النُّوْرِ الْمُبِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+أَحْمَدَ اْلمُصْطَفٰى سَيِّدِ الْمُرْسَلِيْنَ<font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+وَعَلىٰ آلِهِ وَصَحْبِهِ أَجْمَعِيْنَ<font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+سُبْحَانَ رَبِّكَ رَبِّ اْلعِزَّةِ عَمَّا يَصِفُوِنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَسَلَامٌ عَلَى الْمُرْسَلِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> وَالْحَمْدُ لِلّٰهِ رَبِّ اْلعَالَمِيْنَ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font> اَلْفَاتِحَةِ <font size="5" face="LPMQ_IsepMisbah" color="#099141">۞</font>
+
+
+
+</div>
+<br/><br/>
+
+  <div class="bottom-nav">
+    <div class="bottom-link-nav"> 
+    <a href="index.html">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+    </a>
+
+    <a href="37.html">
+	<svg style="width:30px;height:30px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M18,11V13H10L13.5,16.5L12.08,17.92L6.16,12L12.08,6.08L13.5,7.5L10,11H18M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12Z" /></svg>
+    </a>
+	
+    <a href="">
+    <font size="3" face="LPMQ_IsepMisbah">٣٨</font>
+	</a>
+	
+	<a href="">
+     
+    <path fill="currentColor" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z" /></svg>
+    </a>
+	
+    <a href="#" id="tmnj">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+    </a>
+	
+
+    </div>
+
+
+
+
+
+</body>
+</html>
